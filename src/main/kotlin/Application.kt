@@ -24,7 +24,7 @@ class Application : JFrame() {
     private val panel: JPanel = object : JPanel() {
         override fun paintComponent(g: Graphics) {
             super.paintComponent(g)
-            g.drawImage(ImageIcon("C:\\Users\\bacca\\Desktop\\TaxCalcu\\src\\main\\resources\\AppBG.png").image, 0, 0, null)
+            g.drawImage(ImageIcon("C:\\Users\\karla\\IdeaProjects\\KotlinTaxCalculator\\src\\main\\resources\\AppBG.png").image, 0, 0, null)
         }
     }
 
@@ -171,8 +171,8 @@ class Application : JFrame() {
     private fun philhealthCompute(monthlyIncome: Double): Double {
         return when (monthlyIncome) {
             in 0.0..10000.0 -> 225.0
-            in 10_000.01..79999.99 -> monthlyIncome * 0.0225
-            else -> 1800.0
+            in 10_000.01..89999.99 -> monthlyIncome * 0.0225
+            else -> 4050.00
         }
     }
 
