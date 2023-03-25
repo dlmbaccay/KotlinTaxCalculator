@@ -49,7 +49,7 @@ class TaxApplication : JFrame() {
     // design variables
     private val darkGreen = Color(49, 69, 40)
     private val lightGreen = Color(177,216,183)
-    private val formatter = NumberFormat.getInstance(Locale.getDefault()) as DecimalFormat
+    private val decimalFormat = NumberFormat.getInstance(Locale.getDefault()) as DecimalFormat
 
     init { // constructor
         title = "Tax Calculator"
@@ -59,7 +59,7 @@ class TaxApplication : JFrame() {
         setLocationRelativeTo(null)
 
         // formatting of value printing
-        formatter.applyPattern("#,##0.00")
+        decimalFormat.applyPattern("#,##0.00")
 
         // initialize display
         initComponents()
@@ -252,14 +252,14 @@ class TaxApplication : JFrame() {
     }
 
     private fun updateLabels() {
-        sssLabel.text =         "  ₱ ${formatter.format(sss)}"
-        philHealthLabel.text =  "  ₱ ${formatter.format(philHealth)}"
-        pagIBIGLabel.text =     "  ₱ ${formatter.format(pagIBIG)}"
-        totalConLabel.text =    "  ₱ ${formatter.format(totalContribution)}"
-        incomeTaxLabel.text =   "  ₱ ${formatter.format(incomeTax)}"
-        netATaxLabel.text =     "  ₱ ${formatter.format(netAfterTax)}"
-        totalDedLabel.text =    "  ₱ ${formatter.format(totalDeductions)}"
-        netADedLabel.text =     "  ₱ ${formatter.format(netAfterDeductions)}"
+        sssLabel.text =         "  ₱ ${decimalFormat.format(sss)}"
+        philHealthLabel.text =  "  ₱ ${decimalFormat.format(philHealth)}"
+        pagIBIGLabel.text =     "  ₱ ${decimalFormat.format(pagIBIG)}"
+        totalConLabel.text =    "  ₱ ${decimalFormat.format(totalContribution)}"
+        incomeTaxLabel.text =   "  ₱ ${decimalFormat.format(incomeTax)}"
+        netATaxLabel.text =     "  ₱ ${decimalFormat.format(netAfterTax)}"
+        totalDedLabel.text =    "  ₱ ${decimalFormat.format(totalDeductions)}"
+        netADedLabel.text =     "  ₱ ${decimalFormat.format(netAfterDeductions)}"
     }
 
     private fun calculate() {

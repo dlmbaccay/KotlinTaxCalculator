@@ -1,5 +1,3 @@
-//// to compile: kotlinc Terminal.kt -include-runtime -d MyProgram.jar
-//
 //import java.text.DecimalFormat
 //import java.text.NumberFormat
 //import java.util.*
@@ -7,8 +5,8 @@
 //
 //fun main() {
 //
-//    val formatter = NumberFormat.getInstance(Locale.getDefault()) as DecimalFormat
-//    formatter.applyPattern("#,##0.00")
+//    val decimalFormat = NumberFormat.getInstance(Locale.getDefault()) as DecimalFormat
+//    decimalFormat.applyPattern("#,##0.00")
 //    var monthlyIncome = 0.0
 //
 //    try {
@@ -33,19 +31,19 @@
 //
 //    println("""
 //        Tax Computation
-//        Monthly Income: ${formatter.format(monthlyIncome)}
+//        Monthly Income: ${decimalFormat.format(monthlyIncome)}
 //
 //        Monthly Contribution
-//        SSS: ${formatter.format(sss)}
-//        PhilHealth: ${formatter.format(philHealth)}
-//        Pag-IBIG: ${formatter.format(pagIBIG)}
-//        Total Contributions: ${formatter.format(totalContribution)}
+//        SSS: ${decimalFormat.format(sss)}
+//        PhilHealth: ${decimalFormat.format(philHealth)}
+//        Pag-IBIG: ${decimalFormat.format(pagIBIG)}
+//        Total Contributions: ${decimalFormat.format(totalContribution)}
 //
-//        Income Tax: ${formatter.format(incomeTax)}
-//        Net Pay After Tax: ${formatter.format(netAfterTax)}
+//        Income Tax: ${decimalFormat.format(incomeTax)}
+//        Net Pay After Tax: ${decimalFormat.format(netAfterTax)}
 //
-//        Total Deductions: ${formatter.format(totalDeductions)}
-//        Net Pay After Deductions: ${formatter.format(netAfterDeductions)}
+//        Total Deductions: ${decimalFormat.format(totalDeductions)}
+//        Net Pay After Deductions: ${decimalFormat.format(netAfterDeductions)}
 //    """.trimIndent())
 //}
 //
