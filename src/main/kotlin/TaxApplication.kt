@@ -1,5 +1,3 @@
-// to compile: kotlinc TaxApplication.kt -include-runtime -d TaxApplication.jar
-// to run: java -jar TaxApplication.jar
 import java.awt.Color
 import java.awt.Dimension
 import java.awt.Font
