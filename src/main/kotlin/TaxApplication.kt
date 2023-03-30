@@ -297,7 +297,7 @@ class TaxApplication : JFrame() {
 
     private fun incomeTaxCompute(deductedIncome: Double): Double {
         return when (deductedIncome) {
-            in 0.0..20832.0 -> 0.0
+            in Double.NEGATIVE_INFINITY..20832.0 -> 0.0
             in 20833.0..33332.0 -> 0.0 + ((deductedIncome - 20833) * 0.15)
             in 33333.0..66666.0 -> 1875.00 + ((deductedIncome - 33333) * 0.20)
             in 66667.0..166666.0 -> 8541.80 + ((deductedIncome - 66667) * 0.25)
