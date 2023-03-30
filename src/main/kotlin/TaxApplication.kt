@@ -307,16 +307,17 @@ class TaxApplication : JFrame() {
 
     private fun inputListener(): ActionListener {
         return ActionListener {
+            val decimal = inputField.text.replace(",", "").toDouble()
             try {
-                if (inputField.text.toDouble() < 0)
+                if (decimal < 0)
                     throw Exception("Positive values only!")
                 else {
-                    monthlyIncome = inputField.text.toDouble()
+                    monthlyIncome = decimal
                     calculate()
                     updateLabels()
                 }
 
-            } catch (e: Exception) {
+            } catch (e : Exception) {
                 JOptionPane.showMessageDialog(
                     panel,
                     "Input positive values only!",
